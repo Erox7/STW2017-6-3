@@ -1,0 +1,10 @@
+  {% extends "base.html" %}
+  {% block content %}
+      {% if sobres %}
+      {% for sobre in sobres%}
+      {{ sobre.donor.name }} - {{ sobre.concept }} - {{ sobre.amount }}€
+      {% endfor %}
+      {% else %}
+      <P> no tens sobres, desgraciat!</P>
+      {% endif %}
+  {% endblock %}
